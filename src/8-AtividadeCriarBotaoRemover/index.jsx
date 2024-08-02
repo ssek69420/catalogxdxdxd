@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const [productsList, setProductsList] = useState([
@@ -21,6 +23,7 @@ export default function Home() {
 
   return (
     <div>
+      <Header title={"Titulo"}/>
       <h1>Lista de Produtos</h1>
       <div>
         {productsList.map((product) => (
@@ -42,6 +45,7 @@ export default function Home() {
           </div>
         ))}
       </div>
+      <Footer dev={"FOOTER"}/>
     </div>
   );
 }
